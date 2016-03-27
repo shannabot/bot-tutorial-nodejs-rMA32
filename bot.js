@@ -15,7 +15,7 @@ function respond() {
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
-  if(request.text && botRegexAll.test(request.text) &&(request.name.indexOf("Tailor")>-1 || request.name.indexOF("Rebecca")>-1)) {
+  if(request.text && botRegexAll.test(request.text) &&(request.name.indexOf("Tailor")>-1 || request.name.indexOf("Rebecca")>-1)) {
     this.res.writeHead(200);
     postMessage("Nevermind");
     this.res.end();
