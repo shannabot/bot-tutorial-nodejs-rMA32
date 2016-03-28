@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
-      botRegexAll = /^((?!ERROR SYSTEM FAILURE).)*$/gm;
+      botRegexAll = /^((?!You can't get rid of me that easily, Dhillon).)*$/gm;
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
       botRegexSiege = /^\/siege/
@@ -17,7 +17,7 @@ function respond() {
                 "MIA","BUF","SF","WAS","NYJ","TB"]
   if(request.text && botRegexAll.test(request.text) &&(request.name.indexOf("Tailor")>-1 || request.name.indexOf("Rebecca")>-1)) {
     this.res.writeHead(200);
-    postMessage("ERROR SYSTEM FAILURE");
+    postMessage("You can't get rid of me that easily, Dhillon");
     this.res.end();
   }
   else if(request.text && botRegexDL.test(request.text)) {
