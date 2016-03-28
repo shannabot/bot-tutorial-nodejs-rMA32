@@ -17,7 +17,7 @@ function respond() {
                 "MIA","BUF","SF","WAS","NYJ","TB"]
   if(request.text && botRegexAll.test(request.text) &&(request.name.indexOf("Tailor")>-1 || request.name.indexOf("Rebecca")>-1)) {
     this.res.writeHead(200);
-    postMessage("Nevermind");
+    postMessage("why");
     this.res.end();
   }
   else if(request.text && botRegexDL.test(request.text)) {
